@@ -33,7 +33,7 @@
           <Property Name="Address" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="Phone" Type="String" MaxLength="14" FixedLength="false" Unicode="true" />
         </EntityType>
-        <EntityContainer Name="employeeDBEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Employees" EntityType="Self.Employee" />
         </EntityContainer>
       </Schema>
@@ -41,7 +41,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="employeeDBModelStoreContainer" CdmEntityContainer="employeeDBEntities">
+        <EntityContainerMapping StorageEntityContainer="employeeDBModelStoreContainer" CdmEntityContainer="Entities">
           <EntitySetMapping Name="Employees">
             <EntityTypeMapping TypeName="employeeDBModel.Employee">
               <MappingFragment StoreEntitySet="Employee">

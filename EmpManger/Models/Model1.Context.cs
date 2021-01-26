@@ -13,10 +13,10 @@ namespace EmpManger.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class employeeDBEntities : DbContext
+    public partial class Entities : DbContext
     {
-        public employeeDBEntities()
-            : base("name=employeeDBEntities")
+        public Entities()
+            : base("name=Entities")
         {
         }
     
