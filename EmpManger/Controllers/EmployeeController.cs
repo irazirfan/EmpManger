@@ -112,5 +112,21 @@ namespace EmpManger.Controllers
 
             return Ok(employee);
         }
+
+        [HttpPost]
+        [Route("DeleteEmployees")]
+        public IHttpActionResult DeleteEmployees(int[] ids)
+        {
+            List<Employee> employees = new List<Employee>();
+            foreach( var id in ids)
+            {
+                var selectedEmployees = entities.Employees.Find(id);
+                employees.Add(selectedEmployees);
+            }
+            entities.Employees.RemoveRange(employees);
+            entities.SaveChanges();
+
+            return Ok(employees);
+        }
     }
 }
