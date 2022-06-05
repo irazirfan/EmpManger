@@ -11,4 +11,4 @@ the back-end of  a simple crud applicationion in Asp.Net web API
 Update-Package Microsoft.CodeDom.Providers.DotNetCompilerPlatform -r
 ```
 
-4) import db backuop file in ssms
+4) import db backup file in ssms
